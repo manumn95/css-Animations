@@ -13,39 +13,41 @@ a {
   border: 5px solid #351435;
   position: relative;
   overflow: hidden;
+  color: transparent;
   transition: 1s;
 }
 a:before {
-  content: "";
+  content: "Hover Me";
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #351435;
+  background-color: yellow;
+  color: grey;
   height: 100%;
   width: 100%;
-  z-index: -1;
-  transition: 1s;
-  transform: rotateX(90deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+a:after {
+  content: "Hover Me";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: yellow;
+  color: grey;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  transform: translate(-100%, 100%);
 }
 a:hover:before {
-  transform: rotateX(0deg);
-}
-a:hover {
-  color: white;
-}
-
-a:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #351435;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  transition: 1s;
-  transform: rotateY(90deg);
+  transform: translate(100%, -100%);
 }
 a:hover:after {
-  transform: rotateY(0deg);
+  transform: translate(0, 0);
 }
