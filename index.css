@@ -13,7 +13,7 @@ a {
   border: 5px solid #351435;
   position: relative;
   overflow: hidden;
-  transition: all 1s;
+  transition: 1s;
 }
 a:before {
   content: "";
@@ -24,12 +24,28 @@ a:before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  transform: translateX(-100%);
-  transition: all 1s;
+  transition: 1s;
+  transform: rotateX(90deg);
 }
 a:hover:before {
-  transform: translateX(0);
+  transform: rotateX(0deg);
 }
 a:hover {
   color: white;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #351435;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: 1s;
+  transform: rotateY(90deg);
+}
+a:hover:after {
+  transform: rotateY(0deg);
 }
