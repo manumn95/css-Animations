@@ -4,50 +4,35 @@ body {
   justify-content: center;
   align-items: center;
 }
-a {
-  padding: 40px 80px;
-  font-size: 45px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #351435;
-  border: 5px solid #351435;
+.btn {
+  border: 2px solid tomato;
+  background: none;
+  color: tomato;
+  cursor: pointer;
+  font-size: 25px;
+  text-transform: uppercase;
   position: relative;
+  transition: all 1s;
+  padding: 20px 40px;
   overflow: hidden;
-  color: transparent;
-  transition: 1s;
 }
-a:before {
-  content: "Hover Me";
+
+.btn:before {
+  content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  background-color: yellow;
-  color: grey;
-  height: 100%;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+  background-color: tomato;
+  z-index: -1;
+  border-radius: 0 0 50% 50%;
+  height: 0%;
   transition: all 0.5s;
 }
-a:after {
-  content: "Hover Me";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: yellow;
-  color: grey;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s;
-  transform: translate(-100%, 100%);
+.btn:hover:before {
+  height: 190%;
 }
-a:hover:before {
-  transform: translate(100%, -100%);
-}
-a:hover:after {
-  transform: translate(0, 0);
+.btn:hover {
+  color: white;
 }
